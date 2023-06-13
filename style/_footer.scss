@@ -1,0 +1,45 @@
+.footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $principal;
+    padding: 10px;
+  }
+  &__title {
+    color: $white;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  &__enlaces {
+    text-decoration: none;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s linear;
+    gap: 5px;
+    font-size: 1.2rem;
+  }
+  &__enlaces:nth-child(3), &__enlaces:nth-child(4) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  @media (min-width: 768px) {
+    &__container{
+      padding: 30px 0;
+    }
+    &__info{
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}

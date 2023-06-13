@@ -1,0 +1,36 @@
+.reviews{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  &__container{
+    overflow: auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__cards{
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    transition: .3s linear;
+    &:hover &-title{
+      color: $terciario;
+    }
+    &-title{
+      color: $principal;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+  }
+}

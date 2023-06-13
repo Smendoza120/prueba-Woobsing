@@ -1,0 +1,174 @@
+.section {
+  &__container{
+    margin-top: 10px;
+  }
+  @media (min-width: 768px) {
+    &__container {
+      display: flex;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 60%;
+    }
+  }
+  @media (min-width: 1400px) {
+    &__container{
+      margin: 10px 100px;
+    }
+    &__info{
+      justify-content: space-between;
+      flex: 90%;
+    }
+  }
+}
+
+.info {
+  &__section {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Images/fondo.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 80%;
+    &::before{
+      background: hsl(0, 0%, 0%);
+    }
+  }
+  &__container {
+    &-subtitle {
+      border-bottom: 1px solid $principal;
+    }
+  }
+  &__title {
+    color: $principal;
+    font-size: 2rem;
+    font-weight: 500;
+    b {
+      color: $segundario;
+      font-weight: 500;
+    }
+  }
+  &__subtitle {
+    color: $principal;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-bottom: 1px solid $principal;
+  }
+  &__text {
+    margin-top: 8px;
+    text-align: end;
+    color: $segundario;
+    font-size: 1.08rem;
+  }
+  @media (min-width: 768px) {
+    &__section {
+      position: relative;
+    }
+    &__container {
+      position: absolute;
+      right: 20px;
+      bottom: 13px;
+    }
+  }
+}
+
+//Inscripcion
+.inscription {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-container {
+      background: $principal;
+      flex: 40%;
+    }
+    &-title {
+      color: $white;
+      font-weight: 700;
+      margin-top: 10px;
+      border-bottom: 1px solid $white;
+      b {
+        color: $segundario;
+      }
+    }
+    &-inputs {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 15px 0;
+    }
+    &-input {
+      width: 100%;
+      color: black;
+      border: none;
+      border-radius: 1px;
+      padding: 5px 2px;
+    }
+    &-buttons {
+      margin-bottom: 10px;
+      &-button {
+        padding: 10px;
+        color: $white;
+        background: $segundario;
+        border: none;
+        border-radius: 1px;
+        transition: 0.3s linear;
+        &:hover {
+          cursor: pointer;
+          -webkit-box-shadow: -2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: -2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &__form {
+      &-container {
+        grid-area: 1 / 6 / 10 / 9;
+      }
+    }
+  }
+}
+
+.cards {
+  &__container {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+    gap: 5px;
+    height: 50px;
+    background: $degrade !important;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: $white;
+    &-text {
+      font-size: 0.94rem;
+    }
+  }
+  &__card:last-child {
+    background: $segundario;
+    height: 48px;
+  }
+  @media (min-width: 768px) {
+    &__container {
+      grid-area: 8 / 1 / 10 / 6;
+    }
+  }
+}
